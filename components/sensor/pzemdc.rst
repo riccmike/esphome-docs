@@ -40,23 +40,28 @@ to some pins on your board and the baud rate set to 9600.
           name: "PZEM-003 Current"
         voltage:
           name: "PZEM-003 Voltage"
+        energy:
+          name: "PZEM-003 Energy"
         power:
           name: "PZEM-003 Power"
+        frequency:
+          name: "PZEM-003 Frequency"
+        power_factor:
+          name: "PZEM-003 Power Factor"
         update_interval: 60s
 
 Configuration variables:
 ------------------------
 
-- **current** (*Optional*): Use the current value of the sensor in amperes. All options from
-  :ref:`Sensor <config-sensor>`.
-- **power** (*Optional*): Use the power value of the sensor in watts. All options from
-  :ref:`Sensor <config-sensor>`.
-- **voltage** (*Optional*): Use the voltage value of the sensor in volts.
-  All options from :ref:`Sensor <config-sensor>`.
-- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the
-  sensor. Defaults to ``60s``.
-- **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to
-  the same UART bus. You will need to set the address of each device manually. Defaults to ``1``.
+- **current** (*Optional*): Use the current value of the sensor in amperes. All options from :ref:`Sensor <config-sensor>`.
+- **voltage** (*Optional*): Use the voltage value of the sensor in volts. All options from :ref:`Sensor <config-sensor>`.
+- **energy** (*Optional*): Use the (active) energy value of the sensor in watt*hours. All options from :ref:`Sensor <config-sensor>`.
+- **power** (*Optional*): Use the power value of the sensor in watts. All options from :ref:`Sensor <config-sensor>`.
+- **frequency** (*Optional*): Use the frequency value of the sensor in hertz. All options from :ref:`Sensor <config-sensor>`.
+- **power_factor** (*Optional*): Use the power factor value of the sensor. All options from :ref:`Sensor <config-sensor>`.
+- **update_interval** (*Optional*, :ref:`config-time`): The interval to check the sensor. Defaults to ``60s``.
+- **address** (*Optional*, int): The address of the sensor if multiple sensors are attached to the same UART bus. You will need to set the address of each device manually. Defaults to ``1``.
+- **modbus_id** (*Optional*, ID): Manually specify the ID of the Modbus hub.
 
 See Also
 --------
